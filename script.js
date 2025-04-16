@@ -44,10 +44,19 @@ function keydownHandler (e) {
   
 
 
+function pasteHandler(evt) {
+    evt.preventDefault()
+}
+
+
 
 usernameInputElem.addEventListener('focus', usernameFocusHandler)
 passwordInputElem.addEventListener('focus', passwordFocusHandler)
 usernameInputElem.addEventListener('blur', blurHandler)
 passwordInputElem.addEventListener('blur', blurHandler)
+usernameInputElem.addEventListener('paste', pasteHandler)
+passwordInputElem.addEventListener('paste', pasteHandler)
 usernameInputElem.addEventListener('input', changeInputHandler)
 usernameInputElem.addEventListener('keydown', keydownHandler)
+
+
